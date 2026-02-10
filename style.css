@@ -70,6 +70,7 @@ button:hover { background: var(--accent); color: #fff; box-shadow: 0 0 20px var(
 
 .slide {
     height: 100dvh; width: 100%; scroll-snap-align: start;
+    scroll-snap-stop: always;
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
 }
@@ -127,4 +128,5 @@ button:hover { background: var(--accent); color: #fff; box-shadow: 0 0 20px var(
 .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
 .delay { animation-delay: 0.5s; }
 .delay-2 { animation-delay: 1s; }
+
 @keyframes fadeIn { to { opacity: 1; } }
