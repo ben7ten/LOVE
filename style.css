@@ -65,12 +65,19 @@ button {
 button:hover { background: var(--accent); color: #fff; box-shadow: 0 0 20px var(--accent); }
 
 /* --- СЛАЙДЕР --- */
-#app { height: 100dvh; overflow-y: scroll; scroll-snap-type: y mandatory; opacity: 0; transition: opacity 1s ease; }
+#app {
+    height: 100dvh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: auto; 
+    overscroll-behavior-y: contain;
+    opacity: 0; 
+    transition: opacity 1s ease;
+}
 #app.visible { opacity: 1; }
 
 .slide {
-    height: 100dvh; width: 100%; scroll-snap-align: start;
-    scroll-snap-stop: always;
+    height: 100dvh; width: 100%; scroll-snap-align: start; scroll-snap-stop: always;
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
 }
@@ -130,3 +137,4 @@ button:hover { background: var(--accent); color: #fff; box-shadow: 0 0 20px var(
 .delay-2 { animation-delay: 1s; }
 
 @keyframes fadeIn { to { opacity: 1; } }
+
